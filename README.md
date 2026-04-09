@@ -207,74 +207,9 @@ Key tables include: `users`, `profiles`, `ingredients`, `tracked_meals`, `nutrit
 | **Caching** | In-memory TTL cache |
 | **Testing** | pytest |
 
----
-
-## 📁 Project Structure
-
-```
-Gourmate/
-├── app.py                    # Main Streamlit application (1900+ lines)
-├── backend.py                # Core backend — all DB ops, AI calls, auth (1700+ lines)
-├── config.py                 # Configuration management
-├── supabase_db.py            # Supabase client initialisation
-├── run.py                    # Application launcher
-├── requirements.txt          # Python dependencies
-├── views/                    # Page modules
-│   ├── onboarding.py         # Cinematic login/signup with fun AI tips
-│   ├── mode.py               # Smart mode selection & suggestions
-│   ├── profiles.py           # User/Family/Bartender profiles + timezone picker
-│   ├── individual.py         # Individual mode home page
-│   ├── family.py             # Family mode — members, groups, chores, shared recipes
-│   ├── ingredients_new.py    # Smart pantry management
-│   ├── recipes.py            # Full AI recipe generation
-│   ├── photo_analysis.py     # Photo → calorie analysis
-│   ├── tracking.py           # Meal tracking & daily progress
-│   ├── nutrition.py          # Nutrition dashboard & goals
-│   ├── ml_insights.py        # ML-powered preference insights
-│   ├── cocktail.py           # Cocktail & mocktail generation
-│   ├── bar_inventory.py      # Bar stock management
-│   ├── budget.py             # Budget tracking & spending insights
-│   ├── gamification.py       # Achievements, badges & streaks
-│   ├── cookbook.py            # Saved recipe collection
-│   ├── grocery.py            # Smart grocery lists
-│   ├── special.py            # Special occasions & fusion cuisine
-│   ├── community.py          # Community recipe sharing
-│   └── admin.py              # Admin observation panel
-├── utils/                    # Utility modules
-│   ├── helpers.py            # Timezone detection, seasonal produce, weather
-│   ├── llm.py                # LLM wrapper (OpenAI + Gemini)
-│   ├── db.py                 # Database utilities
-│   ├── db_connection.py      # Supabase REST adapter
-│   ├── security.py           # Auth, hashing, rate limiting, CSRF
-│   ├── cache.py              # API response caching
-│   ├── ml_preferences.py     # ML preference engine (K-Means)
-│   ├── gamification.py       # Achievement & badge logic
-│   ├── budget_tracking.py    # Budget & spending logic
-│   ├── nutrition_tracking.py # Nutrition goal calculations
-│   ├── bar_inventory.py      # Bar stock management logic
-│   ├── family_management.py  # Family group utilities
-│   ├── ingredient_categorizer.py # Auto-categorisation
-│   ├── ui_enhancements.py    # Animated UI components
-│   ├── page_themes.py        # Per-page CSS theming
-│   └── feature_tour.py       # Interactive onboarding system
-├── scripts/
-│   └── schema.sql            # Single source of truth — 39 tables + indexes + RLS + seed
-└── tests/
-    ├── test_e2e.py           # 156 end-to-end tests
-    ├── test_modes_and_db.py  # 168 mode & DB tests
-    ├── test_crud_ops.py      # 63 live CRUD tests
-    ├── test_live_collab.py   # 25 collaboration tests
-    ├── test_family.py        # Family feature tests
-    ├── test_smoke.py         # Smoke test
-    └── test_llm.py           # LLM integration tests
-```
 
 ---
 
-## 📝 License
-
-This project is for personal and educational use.
-
----
+Developed By Gahan Kumar Lal
 
 **Made with ❤️ and lots of 🍕**

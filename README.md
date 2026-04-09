@@ -1,215 +1,111 @@
-# 🍳 Gourmate — AI-Powered Cooking & Bar Assistant
+# 🍳 Gourmate
 
-Gourmate is a full-stack AI cooking assistant built with **Streamlit** and powered by **GPT-4o**, **Google Gemini**, and custom **ML models**. It handles everything from smart pantry management and personalised recipe generation to nutrition tracking, family meal planning, cocktail mixing, and budget control — all backed by a **Supabase PostgreSQL** database with Row-Level Security.
+### The AI-Powered Kitchen & Bar Companion
 
----
+Gourmate is an intelligent food and beverage assistant that combines **generative AI**, **computer vision**, and **machine learning** to transform how people cook, eat, plan meals, and entertain — all from a single web application.
 
-## 🎭 Three Modes, One App
-
-| Mode | Description |
-|------|-------------|
-| **👤 Individual** | Personal recipes, nutrition tracking, quick meals, photo-based calorie logging |
-| **👨‍👩‍👧‍👦 Family** | Scaled recipes, family member profiles, shared pantry, chore assignment, group meal plans, leftover wizard, budget planner |
-| **🍸 Bartender** | Cocktail & mocktail generator, bar inventory management, party planner, drink pairings |
-
-Each mode has its own navigation, pages, and AI prompts tailored to the context.
+Built for individuals, families, and home bartenders.
 
 ---
 
-## ✨ Features
+## The Problem
 
-### 🥕 Smart Pantry
-- Add ingredients via **manual entry**, **quick-add**, **barcode scanning**, or **photo upload**
-- AI-powered **receipt & shelf photo extraction** (GPT-4o Vision) — snap a picture and ingredients are added automatically
-- Automatic **ingredient categorisation** (produce, dairy, protein, grains, spices, etc.)
-- Expiry date tracking to reduce food waste
-- Shared family pantry in Family Mode
+People waste food because they don't know what to cook with what they have. Families struggle to coordinate meals around everyone's dietary needs. Home entertainers wing it with no planning tools. And nobody tracks nutrition consistently because it's too much effort.
+
+## The Solution
+
+Gourmate brings together **AI recipe generation**, **photo-based nutrition tracking**, **family meal coordination**, **smart grocery planning**, and **cocktail crafting** into one platform — powered by GPT-4o, Gemini, and custom ML models that learn each user's preferences over time.
+
+---
+
+## What It Does
+
+### 🎭 Three Modes
+
+**Individual Mode** — Personalised cooking for one or two. AI generates recipes from your pantry, respects your dietary restrictions and allergies, tracks your nutrition automatically, and learns your taste preferences over time.
+
+**Family Mode** — Coordinates meals for the whole household. Each family member has their own dietary profile. The app cross-checks every recipe against everyone's allergies, scales servings, assigns cooking chores, manages shared grocery budgets, and lets families create private groups with shared recipe collections and meal plans.
+
+**Bartender Mode** — A complete home bar management system. Generate cocktails and mocktails from your available spirits, plan party drink menus with quantity calculations, track bar inventory with low-stock alerts, and get AI-suggested food pairings for any drink.
+
+---
+
+### 🥕 Smart Pantry Management
+
+Add ingredients four ways — type them in, select from common items, **scan a barcode**, or **photograph your fridge/pantry/receipt** and let GPT Vision extract everything automatically. Ingredients are auto-categorised and tracked with expiry dates to reduce waste.
 
 ### 🍲 AI Recipe Generation
-- Context-aware recipes based on **time of day, season, weather, location, and your profile**
-- Respects **dietary restrictions, allergies, and health goals** for every household member
-- Choose cuisine, serving count, cooking type (cooking/baking), and meal mode (meals/dessert)
-- Recipes ranked by **ingredient match %** — highlights what you already have vs. what's missing
-- One-click **meal tracking** from any generated recipe
-- **Surprise Me** — random recipe generation based on your profile and pantry
 
-### ⚡ Quick Recipes
-- Timezone-aware **meal type detection** (Breakfast / Lunch / Dinner based on your local time)
-- Instant recipe suggestions based on time of day, meal history, and current pantry
-- No settings to fiddle with — just tap and cook
+Recipes are generated with full context awareness — **time of day, season, weather, location, available ingredients, dietary restrictions, allergies, health goals, and personal taste history**. Each recipe shows an ingredient match percentage so you know exactly what you have and what you need. One tap tracks the meal and logs its nutrition.
 
-### 📸 Photo → Calories
-- Upload a food photo and GPT Vision identifies the dish
-- Estimates **calories, macros (protein/carbs/fat), and micronutrients**
-- One-click logging to your meal tracker
-- Works for any cuisine or home-cooked meal
+### 📸 Photo-to-Nutrition
 
-### 📊 Meal Tracker
-- Log meals with full nutritional breakdown
-- Daily progress bars against personalised calorie/macro goals
-- Auto-calculated **BMR/TDEE** based on your profile (age, weight, height, activity level)
-- Weekly and monthly **trend charts** (Plotly interactive visualisations)
-- Water intake tracking
+Snap a photo of any meal. GPT Vision identifies the dish and estimates **calories, protein, carbs, fat, and micronutrients**. One tap logs it. Works for any cuisine — restaurant meals, home cooking, street food.
 
-### 🥗 Nutrition Dashboard
-- Deep-dive macro split visualisation (pie charts, bar charts)
-- Micronutrient tracking (vitamins, minerals, fibre)
-- Custom daily targets for protein, carbs, fat, fibre, and more
-- Historical nutrition trends over time
-- Nutrition goal setting and progress tracking
+### 📊 Nutrition Intelligence
 
-### 🧠 AI Insights (ML-Powered)
-- **User Preference Engine** — learns your food preferences over time using K-Means clustering
-- Top cuisines, ingredient affinity scores, and flavour profile analysis
-- **Meal prediction** — predicts what you'll want to eat next
-- Personalised cooking suggestions that improve with usage
-- Drink preference analysis in Bartender Mode
+Auto-calculated daily targets based on your body metrics (BMR/TDEE). Real-time progress bars for calories and macros. Interactive trend charts over days, weeks, and months. Water intake tracking. Custom goal setting for specific nutrients.
 
-### 👨‍👩‍👧‍👦 Family Mode
-- **Family member profiles** with individual dietary restrictions, allergies, and preferences
-- **Automatic serving scaling** for the whole family
-- **Allergen cross-checking** — recipes are validated against every member's allergies
-- **Family Groups** — create or join a group with a shared code
-  - **Shared Recipes** — save recipes to a common group cookbook
-  - **Meal Plan** — group admin sets daily meal plans visible to all members
-  - **Chore Assignment** — admin assigns cooking/cleaning tasks with due dates and status tracking
-  - **Leadership Transfer** — admin can transfer group leadership to another member
-  - **Shared Pantry** — aggregated view of all members' ingredients
-- **Leftover Wizard** — tell Gourmate what's left over and get new meal ideas to reduce waste
-- **Family Events** — plan meals for birthdays, holidays, and celebrations
+### 🧠 Machine Learning Insights
 
-### 💰 Budget Planner (Family Mode)
-- Set monthly/weekly food budget with **multi-currency support** (auto-detected from profile location)
-- Track grocery spending with transaction history
-- Budget utilisation progress bars and overspend alerts
-- AI-powered **cost-optimised recipe suggestions** when budget is tight
-- Spending insights and category breakdown
+A custom **preference engine** learns your food patterns using K-Means clustering. It tracks your top cuisines, ingredient affinities, and flavour profiles — then predicts what you'll want to eat next. Recommendations improve with every meal you cook or log.
 
-### 🍸 Bartender Mode
-- **Cocktail Generator** — enter your spirits, mixers, and garnishes; get AI-crafted cocktail recipes with instructions, glassware tips, and food pairings
-- **Mocktail Generator** — alcohol-free creations for everyone
-- **Party Planner** — enter guest count, occasion, and vibe; get a full drink menu with quantities and a shopping list
-- **Bar Inventory** — track bottles, quantities, costs, and get low-stock alerts
-- **Drink Pairings** — AI-suggested food pairings for any cocktail or spirit
-- **Party Rooms** — collaborative real-time party planning
+### 👨‍👩‍👧‍👦 Family Groups & Collaboration
 
-### 🏆 Gamification & Achievements
-- **Cooking streaks** — track consecutive days of cooking/logging meals
-- **Achievement badges** — unlock milestones (First Meal, 7-Day Streak, 50 Recipes, Budget Master, etc.)
-- **Badge tiers** — Bronze → Silver → Gold → Platinum progression
-- Points system for every meal cooked, recipe saved, or goal hit
-- Animated achievement cards with confetti effects
+Families create private groups with a join code. The group admin can:
+- Set **daily meal plans** visible to all members
+- Assign **cooking and cleaning chores** with due dates and completion tracking
+- Manage a **shared recipe collection** the whole family contributes to
+- **Transfer leadership** to another member
+- View an **aggregated pantry** across all members
 
-### 📖 My Cookbook
-- Bookmark any AI-generated recipe to your personal collection
-- Tag recipes (quick, healthy, comfort food, etc.)
-- Search and filter your saved recipes
-- Re-generate variations of saved recipes
-- Rate and review recipes
+Allergen safety is enforced automatically — no recipe is suggested that conflicts with any member's allergies.
 
-### 🛒 Grocery List
-- Auto-generated shopping lists from missing recipe ingredients
-- Check items off as you shop
-- Meal-plan-based grocery aggregation
-- Smart deduplication of ingredients across multiple recipes
+### 💰 Budget Control
 
-### 🎉 Special Occasions
-- **Fusion Cuisine Creator** — blend two cuisines for unique dishes
-- **Holiday & Celebration Menus** — generate full menus for events
-- **Seasonal Suggestions** — local, seasonal ingredient recommendations
-- **Weather-Based Recipes** — comfort food for rainy days, light meals for hot weather
+Set a monthly food budget in any currency (auto-detected from your location). Track every grocery transaction. Get spending breakdowns by category. Receive alerts when approaching your limit. The AI prioritises **cost-efficient recipes** when budget is tight.
 
-### 🌍 Timezone-Aware Meal Detection
-- Set your timezone in your profile (598 IANA timezones supported, common ones listed first)
-- App auto-detects whether it's **Breakfast, Lunch, or Dinner** based on your local time
-- All meal suggestions, quick recipes, welcome greetings, and tracking adapt to your timezone
+### 🍸 Full Bar Management
+
+Track every bottle — spirit type, brand, quantity remaining, and cost. Get **low-stock alerts** before a party. Generate cocktails and mocktails from what you actually have. Plan entire party menus with per-guest quantity calculations and shopping lists. Collaborative **party rooms** for group planning.
+
+### 🏆 Gamification
+
+Cooking streaks, achievement badges (Bronze → Silver → Gold → Platinum), and a points system that rewards consistency. Milestones include first meal, 7-day streak, 50 recipes cooked, budget mastery, and more.
+
+### 🌍 Timezone-Aware
+
+Users set their timezone from 598 supported locations. The app auto-detects whether it's breakfast, lunch, or dinner time locally — so a user in Tokyo and a user in London both get contextually appropriate suggestions at the same moment.
 
 ---
 
-## 🔐 Security & Data
+## Technical Highlights
 
-- **Supabase PostgreSQL** database with **Row-Level Security (RLS)** on all 39 tables
-- Complete **data isolation** — users can only access their own data
-- **Rate limiting** on login attempts
-- **Input sanitisation** on all user inputs
-- **Session security** enforcement with automatic timeout
-- **bcrypt** password hashing (SHA-256 fallback)
-- **CSRF protection** tokens
-- **Admin observation panel** — read-only dashboard for the admin user to monitor app health
-
----
-
-## 🤖 AI & ML Stack
-
-| Technology | Usage |
-|-----------|-------|
-| **GPT-4o** | Primary recipe generation, nutrition analysis, food photo analysis |
-| **GPT-4o Mini** | Quick suggestions, fun tips, lightweight prompts |
-| **Google Gemini 2.5 Flash** | Fallback LLM, image analysis |
-| **GPT Vision** | Ingredient extraction from photos, barcode scanning, food identification |
-| **LangChain + FAISS** | RAG-based recipe retrieval and recommendations |
-| **scikit-learn (K-Means)** | User preference clustering and meal prediction |
-| **sentence-transformers** | Semantic similarity for recipe matching |
-| **YOLOv5 (Ultralytics)** | Object detection for ingredient recognition |
+| Area | Detail |
+|------|--------|
+| **AI / LLM** | GPT-4o for recipe generation and nutrition analysis, GPT-4o Mini for lightweight prompts, Google Gemini 2.5 Flash as fallback, GPT Vision for photo analysis and barcode scanning |
+| **Machine Learning** | scikit-learn (K-Means clustering) for preference learning and meal prediction, sentence-transformers for semantic recipe matching |
+| **RAG Pipeline** | LangChain + FAISS for retrieval-augmented recipe recommendations |
+| **Computer Vision** | YOLOv5 (Ultralytics) for ingredient detection, OpenCV + Pillow for image processing |
+| **Database** | Supabase PostgreSQL — 39 tables with Row-Level Security (RLS) enforcing complete data isolation between users |
+| **Security** | bcrypt password hashing, rate limiting, input sanitisation, CSRF protection, session timeout enforcement, admin-only observation panel |
+| **Caching** | In-memory TTL-based cache for API responses to reduce LLM costs |
+| **Frontend** | Streamlit with custom CSS theming — dark mode, per-page colour schemes, animated components, responsive mobile layout |
+| **Testing** | **483 automated tests** across end-to-end flows, mode-specific logic, live CRUD operations, collaborative features, and data isolation — all passing |
+| **Onboarding** | Interactive feature tour on first login, contextual help tooltips on every page |
 
 ---
 
-## 🎨 UI/UX
+## Built With
 
-- **Dark theme** with gold accent — consistent across all pages
-- **Mode-specific colour themes** — Amber (Individual), Rose/Pink (Family), Teal (Bartender), Green (Budget), Dark Tech (ML Insights)
-- **Animated components** — bounce, pulse, glow, confetti, fade-in effects
-- **Interactive onboarding tour** — first-login walkthrough of all features per mode
-- **Contextual help tooltips** on every page
-- **Responsive design** — sidebar auto-collapses on mobile
-- **Smart mode suggestions** — app suggests switching modes based on time, household size, and events
-- **Welcome card** with timezone-aware greetings (Good Morning / Afternoon / Evening)
-- **API response caching** — reduces LLM costs with TTL-based in-memory cache
+Python · Streamlit · OpenAI GPT-4o · Google Gemini · LangChain · FAISS · scikit-learn · YOLOv5 · Supabase · PostgreSQL · Plotly · OpenCV · PyTorch · bcrypt
 
 ---
 
-## 🧪 Test Suite
+## Author
 
-**483 tests** across 7 test files — all passing.
-
-| File | Tests | Type |
-|------|-------|------|
-| `test_e2e.py` | 156 | End-to-end mock tests covering all pages and features |
-| `test_modes_and_db.py` | 168 | Mode-specific logic, DB table validation, cross-mode integration |
-| `test_crud_ops.py` | 63 | Live Supabase CRUD operations and data isolation |
-| `test_live_collab.py` | 25 | Live collaborative features (family groups, party rooms) |
-| `test_family.py` | 3 | Family member management and allergen checking |
-| `test_smoke.py` | 1 | Basic import and startup validation |
-| `test_llm.py` | 2 | LLM integration (requires API keys) |
+**Gahan Lal**
 
 ---
 
-## 🗄️ Database
-
-**39 tables** in Supabase PostgreSQL, managed via `scripts/schema.sql` (single source of truth).
-
-Key tables include: `users`, `profiles`, `ingredients`, `tracked_meals`, `nutrition_goals`, `recipes`, `favorite_recipes`, `family_members`, `family_events`, `family_groups`, `family_group_recipes`, `family_group_chores`, `family_group_meal_plans`, `cooking_chores`, `chore_rotation_settings`, `meal_plans`, `bartender_profiles`, `cocktails`, `cocktail_menus`, `bar_inventory`, `party_plans`, `party_rooms`, `party_room_members`, `grocery_lists`, `budget_settings`, `spending_transactions`, `user_gamification`, `user_achievements`, `photo_analysis`, `fitness_sync`, `ingredient_categories`, `drink_pairings`, and more.
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| **Frontend** | Streamlit (Python) |
-| **Backend** | Python 3.11 |
-| **Database** | Supabase (PostgreSQL) with RLS |
-| **AI / LLM** | OpenAI GPT-4o, Google Gemini 2.5 Flash |
-| **ML** | scikit-learn, sentence-transformers, FAISS |
-| **Vision** | YOLOv5 (Ultralytics), OpenCV, Pillow |
-| **Charts** | Plotly, Matplotlib |
-| **Security** | bcrypt, PyJWT, CSRF tokens |
-| **Caching** | In-memory TTL cache |
-| **Testing** | pytest |
-
-
----
-
-Developed By Gahan Kumar Lal
-
-**Made with ❤️ and lots of 🍕**
+*This is a private repository. Access is granted on request.*

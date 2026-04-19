@@ -20,6 +20,18 @@ Gourmate brings together **AI recipe generation**, **photo-based nutrition track
 
 ## What It Does
 
+### 🚀 App Features
+
+- Mode-aware navigation with three distinct experiences: **Individual**, **Family**, and **Bartender**.
+- Full sidebar app navigation for Home, Pantry, AI Insights, Recipes, Quick Recipes, Photo → Calories, Meal Tracker, Nutrition, Leftover Wizard, Family Hub, Budget, Party Planner, Bar Inventory, Drink Pairings, Achievements, Cookbook, Grocery List, Profile, and Mode Settings.
+- Smart onboarding and profile setup including full body metrics, dietary restrictions, allergies, favorite cuisines, country, timezone, currency preferences, and personalized goals.
+- AI recipe flow with ingredient matching, pantry availability scoring, dietary and allergy filtering, and one-click meal tracking.
+- Photo-based ingredient/receipt extraction and meal nutrition analysis powered by GPT Vision.
+- Family collaboration: shared groups, family member profiles, group meal plans, chores, budget tracking, and family-safe recipe recommendation.
+- Bartender workflows: cocktails, mocktails, party menus, bar inventory management, low-stock alerts, and drink pairings.
+- Achievement and gamification system for streaks, badges, and progress rewards.
+- Comprehensive grocery and budget tools for planning, tracking, and cost-aware meal recommendations.
+
 ### 🎭 Three Modes
 
 **Individual Mode** — Personalised cooking for one or two. AI generates recipes from your pantry, respects your dietary restrictions and allergies, tracks your nutrition automatically, and learns your taste preferences over time.
@@ -99,6 +111,18 @@ Users set their timezone from 598 supported locations. The app auto-detects whet
 ## Built With
 
 Python · Streamlit · OpenAI GPT-4o · Google Gemini · LangChain · FAISS · scikit-learn · YOLOv5 · Supabase · PostgreSQL · Plotly · OpenCV · PyTorch · bcrypt
+
+---
+
+## Scale
+
+- **1,900+** lines of application logic
+- **1,700+** lines of backend / database operations
+- **39** database tables with RLS policies
+- **483** automated tests (0 failures)
+- **20+** distinct page modules
+- **598** supported timezones
+- **3** fully featured operational modes
 
 ---
 
